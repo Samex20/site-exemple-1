@@ -68,24 +68,24 @@ export function TransitionOverlay({ blend }) {
 
   const title =
     displayBlend?.from === 0
-      ? 'SYSTEM SYNCING'
+      ? 'STUDIO SYNC'
       : displayBlend?.from === 1
-        ? 'ENERGY OVERLOAD'
-        : 'HUD REFRESH'
+        ? 'THERMAL CHECK'
+        : 'VIEW REFRESH'
 
   const subtitle =
     displayBlend?.from === 0
-      ? 'Reloading ballistic telemetry. Rebuilding HUD mesh.'
+      ? 'Loading vehicle telemetry. Rebuilding overlay mesh.'
       : displayBlend?.from === 1
-        ? 'Thermal dump required. Stabilizing interface.'
-        : 'Asset stream switching.'
+        ? 'Cooling cycle required. Stabilizing interface.'
+        : 'Model stream switching.'
 
   const body =
     displayBlend?.from === 0
-      ? 'Optical pipeline reconfiguring. Environmental reflections re-mapped. Asset stream switching.'
+      ? 'Lighting pass reconfigured. Paint reflections re-mapped. Model stream switching.'
       : displayBlend?.from === 1
-        ? 'Reactor noise detected. HUD recalibration in progress. Switching to tactical support platform profile.'
-        : 'Rebuilding overlay primitives.'
+        ? 'Battery heat detected. HUD recalibration in progress. Switching to endurance profile.'
+        : 'Refreshing overlay primitives.'
 
     const wipe = getWipe(t)
     const wipeTone = displayBlend?.from === 1 ? 'rgba(207,162,103,0.95)' : 'rgba(127,232,255,0.95)'

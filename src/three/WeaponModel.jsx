@@ -93,6 +93,6 @@ export function WeaponModel({ url, groupRef, position, rotation, scale = 1 }) {
   )
 }
 
-useGLTF.preload('/models/ak-47.glb', true)
-useGLTF.preload('/models/aps_pistol.glb', true)
-useGLTF.preload('/models/pp-19-01_vityaz.glb', true)
+useGLTF.preload('/models/ac_-_audi_r8_lms_2016_free.glb', true)
+useGLTF.preload('/models/ac_-_mclaren_p1_free.glb', true)
+useGLTF.preload('/models/free_ai_based_conceptcar_050_public_domain_cc0.glb', true)

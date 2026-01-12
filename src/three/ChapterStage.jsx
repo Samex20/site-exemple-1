@@ -25,12 +25,12 @@ class SceneErrorBoundary extends React.Component {
             <div className="font-[var(--mono)] text-[11px] uppercase tracking-[0.26em] text-[var(--amber)]">
               ASSET STREAM ERROR
             </div>
-            <div className="mt-2 font-[var(--title)] text-[22px] text-white">Weapon model failed to load</div>
+            <div className="mt-2 font-[var(--title)] text-[22px] text-white">Vehicle model failed to load</div>
             <div className="mt-3 font-[var(--mono)] text-[12px] leading-6 text-white/60">
               Verify the glb file exists at:
-              <div className="mt-2 text-white/70">/public/models/ak-47.glb</div>
-              <div className="text-white/70">/public/models/aps_pistol.glb</div>
-              <div className="text-white/70">/public/models/pp-19-01_vityaz.glb</div>
+              <div className="mt-2 text-white/70">/public/models/ac_-_audi_r8_lms_2016_free.glb</div>
+              <div className="text-white/70">/public/models/ac_-_mclaren_p1_free.glb</div>
+              <div className="text-white/70">/public/models/free_ai_based_conceptcar_050_public_domain_cc0.glb</div>
             </div>
           </div>
         </div>

@@ -63,9 +63,9 @@ export function Preloader() {
             <div className="font-[var(--mono)] text-[11px] uppercase tracking-[0.26em] text-white/55">
               Loading assets
             </div>
-            <div className="mt-2 font-[var(--title)] text-[22px] text-white">Initializing inspection terminal</div>
+            <div className="mt-2 font-[var(--title)] text-[22px] text-white">Initializing showroom rig</div>
             <div className="mt-2 font-[var(--mono)] text-[12px] text-white/55">
-              {item ? `Streaming: ${item}` : 'Streaming: weapon scenes'}
+              {item ? `Streaming: ${item}` : 'Streaming: car scenes'}
             </div>
           </div>
           <div className="text-right">
@@ -81,8 +81,8 @@ export function Preloader() {
           />
         </div>
         <div className="mt-4 flex items-center justify-between text-[11px] uppercase tracking-[0.26em] text-white/40">
-          <span className="font-[var(--mono)]">SECURE CHANNEL</span>
-          <span className="font-[var(--mono)]">DECRYPT {pct}%</span>
+          <span className="font-[var(--mono)]">STUDIO LINK</span>
+          <span className="font-[var(--mono)]">SYNC {pct}%</span>
         </div>
       </div>
     </div>

@@ -54,10 +54,10 @@ export default function App() {
           <div className="mx-auto flex h-full max-w-6xl flex-col justify-center px-6">
             <div className="mb-5 inline-flex w-fit items-center gap-3 border border-white/10 bg-white/5 px-4 py-2 backdrop-blur">
               <span className="classified-stamp px-3 py-1 font-[var(--mono)] text-[11px] uppercase tracking-[0.24em]">
-                CLASSIFIED
+                HOMOLOGATION
               </span>
               <span className="text-xs uppercase tracking-[0.28em] text-white/55">
-                Secure terminal handshake
+                Showroom link established
               </span>
             </div>
 
@@ -66,11 +66,10 @@ export default function App() {
               data-scramble
               className="glitch-flicker secret-text font-[var(--title)] text-[44px] font-medium tracking-[-0.02em] text-white md:text-[70px]"
             >
-              WEAPON SYSTEMS ARCHIVE
+              PERFORMANCE CAR ARCHIVE
             </h1>
             <p data-reveal data-scramble className="mt-4 max-w-xl font-[var(--mono)] text-[13px] leading-6 text-white/60">
-              Accessing restricted inspection interface. Three assets queued. Scroll to initiate chapter lock and live model
-              telemetry.
+              Accessing curated vehicle dossier. Three assets queued. Scroll to lock chapters and spin live model telemetry.
             </p>
 
             <div className="mt-10 flex items-center gap-4">
@@ -79,9 +78,9 @@ export default function App() {
                 className="group inline-flex items-center gap-3 border border-cyan-300/20 bg-cyan-300/10 px-5 py-3 font-[var(--mono)] text-[12px] uppercase tracking-[0.26em] text-cyan-100 backdrop-blur transition hover:bg-cyan-300/15"
               >
                 <span className="h-[7px] w-[7px] rounded-full bg-[var(--cyan)] shadow-[0_0_18px_rgba(127,232,255,0.55)]" />
-                SCROLL TO INSPECT
+                SCROLL TO EXPLORE
               </a>
-              <span className="text-xs uppercase tracking-[0.26em] text-white/45">Pinned chapters • 60fps target</span>
+              <span className="text-xs uppercase tracking-[0.26em] text-white/45">Pinned chapters - 60fps target</span>
             </div>
           </div>
         </section>
@@ -104,18 +103,18 @@ export default function App() {
         <section id="proof" className="relative border-t border-white/10 bg-black/20 py-24 h-screen">
           <div className="mx-auto max-w-6xl px-6">
             <div className="font-[var(--mono)] text-[12px] uppercase tracking-[0.26em] text-white/60">
-              Agency proof
+              Studio proof
             </div>
             <div className="mt-4 font-[var(--title)] text-[34px] text-white md:text-[48px]">
-              Built for awards-grade WebGL storytelling.
+              Built for premium automotive storytelling.
             </div>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
-              {["Built with WebGL / Three.js / GSAP", "Awwwards-grade motion design", "Performance: 60 fps target"].map(
+              {["Built with WebGL / Three.js / GSAP", "Cinematic motion design", "Performance: 60 fps target"].map(
                 (t) => (
                   <div key={t} className="border border-white/10 bg-white/5 p-6 backdrop-blur">
                     <div className="font-[var(--mono)] text-[12px] uppercase tracking-[0.26em] text-white/80">{t}</div>
                     <div className="mt-3 text-sm leading-6 text-white/55">
-                      Cinematic pinning, technical callouts anchored to 3D, and serious defense-terminal UI.
+                      Cinematic pinning, technical callouts anchored to 3D, and a performance showroom UI.
                     </div>
                   </div>
                 ),
@@ -123,13 +122,13 @@ export default function App() {
             </div>
             <div className="border border-white/10 bg-white/5 p-8 backdrop-blur md:p-12 mt-24">
               <div className="font-[var(--mono)] text-[12px] uppercase tracking-[0.26em] text-white/60">
-                NEXT MISSION
+                NEXT BUILD
               </div>
               <div className="mt-4 font-[var(--title)] text-[34px] text-white md:text-[52px]">
-                Want a site that wins awards?
+                Want a site that sells performance?
               </div>
               <div className="mt-3 font-[var(--mono)] text-[13px] leading-6 text-white/60">
-                Contact Holink Innovation — cinematic WebGL, scroll choreography, premium UI.
+                Contact Holink Studio - cinematic WebGL, scroll choreography, premium UI.
               </div>
             </div>
           </div>
@@ -209,7 +208,7 @@ function ChapterPanel({ weapon, indexLabel }) {
           </div>
 
           <div data-reveal className="mt-4 border border-white/10 bg-white/5 p-5 backdrop-blur">
-            <div className="font-[var(--mono)] text-[11px] uppercase tracking-[0.26em] text-white/55">TACTICAL PANELS</div>
+            <div className="font-[var(--mono)] text-[11px] uppercase tracking-[0.26em] text-white/55">PERFORMANCE PANELS</div>
             <div className="mt-3 space-y-2 text-sm leading-6 text-white/60">
               {weapon.panels.map((p) => (
                 <div key={p} className="flex items-center justify-between">

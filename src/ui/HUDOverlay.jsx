@@ -45,11 +45,11 @@ export function HUDOverlay({ weapon, blend }) {
       <div className="absolute left-0 right-0 top-0 flex items-start justify-between px-6 pt-6">
         <div className="max-w-[520px]">
           <div className="font-[var(--mono)] text-[11px] uppercase tracking-[0.28em] text-white/55">
-            WEAPON SYSTEMS ARCHIVE
+            PERFORMANCE CAR ARCHIVE
           </div>
           <div className="mt-2 flex items-end gap-4">
             <div className="max-w-[280px] truncate font-[var(--title)] text-[18px] text-white/90">
-              {weapon?.name ?? '—'}
+              {weapon?.name ?? '-'}
             </div>
             <div className="max-w-[220px] truncate font-[var(--mono)] text-[11px] uppercase tracking-[0.26em] text-white/45">
               {weapon?.serial ?? 'NO SERIAL'}
@@ -58,9 +58,9 @@ export function HUDOverlay({ weapon, blend }) {
         </div>
 
         <div className="flex items-center gap-2">
-          <Chip tone={statusTone}>ARMED</Chip>
+          <Chip tone={statusTone}>TRACK</Chip>
           <Chip tone={statusTone}>READY</Chip>
-          <Chip tone={statusTone}>ONLINE</Chip>
+          <Chip tone={statusTone}>LIVE</Chip>
         </div>
       </div>
 
@@ -69,9 +69,9 @@ export function HUDOverlay({ weapon, blend }) {
         <div className="border border-white/10 bg-black/20 p-4 backdrop-blur">
           <div className="font-[var(--mono)] text-[11px] uppercase tracking-[0.26em] text-white/55">Telemetry</div>
           <div className="mt-3 grid gap-2 text-[12px] text-white/60">
-            <Row k="COORD" v="N 51.5074 / W 0.1278" />
-            <Row k="GRID" v="SYNCED" />
-            <Row k="HUD" v="LOCKED" />
+            <Row k="LOC" v="N 43.734 / E 7.420" />
+            <Row k="PIT" v="READY" />
+            <Row k="MODE" v="TRACK" />
           </div>
         </div>
       </div>
@@ -79,7 +79,7 @@ export function HUDOverlay({ weapon, blend }) {
       {/* Bottom-right hint */}
       <div className="absolute bottom-0 right-0 p-6">
         <div className="border border-white/10 bg-white/5 px-4 py-3 font-[var(--mono)] text-[11px] uppercase tracking-[0.26em] text-white/55 backdrop-blur">
-          Scroll to inspect • Hover callouts
+          Scroll to explore - Hover callouts
         </div>
       </div>
     </div>

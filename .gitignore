@@ -11,14 +11,32 @@ node_modules
 dist
 dist-ssr
 *.local
+.vite
+.cache
+.parcel-cache
+.eslintcache
+*.tsbuildinfo
+coverage
+*.tgz
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
+Thumbs.db
+.history
+*.iml
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Env files
+.env
+.env.*.local
+
+# Hosting
+.vercel
+.netlify
