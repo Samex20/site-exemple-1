@@ -1,0 +1,182 @@
+export const WEAPONS = [
+  {
+    key: 'ak47',
+    tone: 'cyan',
+    name: 'AK-47',
+    type: 'Assault rifle / gas-operated',
+    serial: 'AK-47-762-1951',
+    modelUrl: '/models/ak-47.glb',
+    story:
+      'AK-47 is a rugged field rifle. Built for reliability under harsh conditions, with a simple gas system and proven endurance.',
+    specs: [
+      { label: 'Caliber', value: '7.62x39mm' },
+      { label: 'Operation', value: 'Gas-operated, rotating bolt' },
+      { label: 'Rate of fire', value: '600 rpm' },
+      { label: 'Effective range', value: '300-400 m' },
+      { label: 'Magazine', value: '30-round detachable' },
+    ],
+    panels: ['Reliability telemetry', 'Gas system status', 'Magazine latch check'],
+    camera: {
+      from: [0.55, 0.25, 4.6],
+      to: [1.05, 0.35, 3.2],
+      lookAt: [0, 0.1, 0],
+    },
+    model: {
+      position: [-0.46, -0.18, 0],
+      rotation: [0.08, -0.6, 0],
+      scale: 1.0,
+    },
+    callouts: [
+      {
+        title: 'GAS TUBE ASSEMBLY',
+        desc: 'Simple gas system tuned for reliable cycling in adverse conditions.',
+        anchor: [0.35, 0.2, 0.15],
+        offset: [120, -70],
+      },
+      {
+        title: 'FRONT SIGHT POST',
+        desc: 'Open sight picture aligned for rapid target acquisition.',
+        anchor: [0.95, 0.05, 0.15],
+        offset: [140, 10],
+      },
+      {
+        title: 'RECEIVER TRUNNION',
+        desc: 'Stamped receiver interface built for durability.',
+        anchor: [-0.05, -0.05, 0.0],
+        offset: [-180, 30],
+      },
+      {
+        title: 'HANDGUARD',
+        desc: 'Heat shielding for sustained fire handling.',
+        anchor: [0.75, -0.02, 0.08],
+        offset: [130, 80],
+      },
+      {
+        title: 'MAGAZINE WELL',
+        desc: 'Rock-and-lock interface for fast reloads.',
+        anchor: [-0.2, -0.35, 0.1],
+        offset: [-200, 90],
+      },
+    ],
+  },
+  {
+    key: 'aps',
+    tone: 'amber',
+    name: 'APS PISTOL',
+    type: 'Automatic pistol / blowback',
+    serial: 'APS-9x18-1951',
+    modelUrl: '/models/aps_pistol.glb',
+    story:
+      'APS is a compact automatic pistol optimized for close-quarters control, with a selectable full-auto mode and a robust steel frame.',
+    specs: [
+      { label: 'Caliber', value: '9x18mm Makarov' },
+      { label: 'Operation', value: 'Blowback' },
+      { label: 'Rate of fire', value: '750 rpm' },
+      { label: 'Effective range', value: '50 m' },
+      { label: 'Magazine', value: '20-round detachable' },
+    ],
+    panels: ['Selector check', 'Slide return', 'Magazine feed audit'],
+    camera: {
+      from: [-0.6, 0.3, 5.0],
+      to: [-1.05, 0.22, 3.45],
+      lookAt: [0, 0.12, 0],
+    },
+    model: {
+      position: [-0.46, -0.18, 0],
+      rotation: [0.05, 0.55, 0],
+      scale: 1.0,
+    },
+    callouts: [
+      {
+        title: 'SELECTOR SWITCH',
+        desc: 'Single and automatic firing selector for close-quarters control.',
+        anchor: [0.2, 0.2, 0.0],
+        offset: [170, -40],
+      },
+      {
+        title: 'SLIDE ASSEMBLY',
+        desc: 'Recoil mass tuned for reliable blowback operation.',
+        anchor: [0.65, 0.05, 0.15],
+        offset: [170, 35],
+      },
+      {
+        title: 'TRIGGER GROUP',
+        desc: 'Compact fire control module with rapid reset.',
+        anchor: [-0.25, 0.1, 0.0],
+        offset: [-200, -30],
+      },
+      {
+        title: 'GRIP FRAME',
+        desc: 'Steel frame for stability during automatic fire.',
+        anchor: [0.1, -0.25, -0.1],
+        offset: [160, 120],
+      },
+      {
+        title: 'MAGAZINE RELEASE',
+        desc: 'Side button release for fast reloads.',
+        anchor: [-0.55, -0.05, 0.1],
+        offset: [-220, 80],
+      },
+    ],
+  },
+  {
+    key: 'vityaz',
+    tone: 'cyan',
+    name: 'PP-19-01 VITYAZ',
+    type: 'Submachine gun / compact platform',
+    serial: 'PP-19-01-9x19',
+    modelUrl: '/models/pp-19-01_vityaz.glb',
+    story:
+      'PP-19-01 Vityaz is a compact 9x19mm submachine gun with a lightweight frame and controllable recoil for urban operations.',
+    specs: [
+      { label: 'Caliber', value: '9x19mm' },
+      { label: 'Operation', value: 'Blowback' },
+      { label: 'Rate of fire', value: '700 rpm' },
+      { label: 'Effective range', value: '200 m' },
+      { label: 'Magazine', value: '30-round detachable' },
+    ],
+    panels: ['Stock lock', 'Charging handle check', 'Magazine alignment'],
+    camera: {
+      from: [0.25, 0.35, 5.1],
+      to: [0.65, 0.22, 3.55],
+      lookAt: [0, 0.15, 0],
+    },
+    model: {
+      position: [-0.46, -0.18, 0],
+      rotation: [0.05, -0.15, 0],
+      scale: 1.0,
+    },
+    callouts: [
+      {
+        title: 'FOLDING STOCK',
+        desc: 'Compact profile for transport and urban movement.',
+        anchor: [-0.25, 0.05, 0.1],
+        offset: [-220, -20],
+      },
+      {
+        title: 'REAR SIGHT',
+        desc: 'Notch sight optimized for short-range engagement.',
+        anchor: [0.35, 0.25, 0.0],
+        offset: [160, -55],
+      },
+      {
+        title: 'HANDGUARD',
+        desc: 'Lightweight foregrip area for control during bursts.',
+        anchor: [0.15, -0.08, 0.0],
+        offset: [170, 30],
+      },
+      {
+        title: 'CHARGING HANDLE',
+        desc: 'Right-side handle for quick chambering.',
+        anchor: [0.0, 0.15, 0.05],
+        offset: [-190, 60],
+      },
+      {
+        title: 'MAGAZINE COUPLER',
+        desc: 'Twin magazine configuration for rapid reloads.',
+        anchor: [0.55, -0.18, 0.05],
+        offset: [180, 120],
+      },
+    ],
+  },
+]

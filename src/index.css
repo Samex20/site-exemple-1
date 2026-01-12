@@ -1,0 +1,242 @@
+@import "tailwindcss";
+
+:root {
+  --bg-0: #07090d;
+  --bg-1: #0b0f16;
+  --grid: rgba(140, 202, 255, 0.08);
+  --ink: rgba(236, 245, 255, 0.86);
+  --muted: rgba(236, 245, 255, 0.58);
+  --cyan: #7fe8ff;
+  --amber: #cfa267;
+
+  --ui: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --mono: "IBM Plex Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --title: "Space Grotesk", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  /* Use same base color as the Three.js canvas to avoid background mismatch */
+  background: #05070c;
+  font-family: var(--ui);
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Ensure root and full-bleed fixed elements cover viewport to avoid uncovered edges */
+#root {
+  min-height: 100vh;
+  width: 100vw;
+  background: #05070c;
+}
+
+/* Tailwind utility classes combine to .fixed.inset-0; force full viewport sizing for any such container */
+.fixed.inset-0 {
+  width: 100vw;
+  height: 100vh;
+}
+
+::selection {
+  background: rgba(127, 232, 255, 0.22);
+}
+
+.hud-scanlines {
+  background:
+    repeating-linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.06) 0px,
+      rgba(255, 255, 255, 0.06) 1px,
+      rgba(0, 0, 0, 0) 3px,
+      rgba(0, 0, 0, 0) 6px
+    );
+  mix-blend-mode: overlay;
+  opacity: 0.15;
+  animation: scanShift 6.5s linear infinite;
+}
+
+@keyframes scanShift {
+  from {
+    transform: translate3d(0, -8%, 0);
+  }
+  to {
+    transform: translate3d(0, 8%, 0);
+  }
+}
+
+.hud-grid {
+  background:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(circle at 50% 45%, black 30%, transparent 68%);
+  opacity: 0.65;
+}
+
+.glitch-flicker {
+  animation: microFlicker 7s infinite;
+}
+
+@keyframes microFlicker {
+  0%,
+  100% {
+    opacity: 1;
+    filter: none;
+  }
+  46% {
+    opacity: 1;
+  }
+  47% {
+    opacity: 0.65;
+    filter: contrast(1.08) saturate(1.12);
+  }
+  49% {
+    opacity: 1;
+    filter: none;
+  }
+}
+
+.secret-text {
+  text-shadow:
+    0 0 12px rgba(127, 232, 255, 0.18),
+    0 0 26px rgba(127, 232, 255, 0.12);
+  animation: secretPulse 4.5s ease-in-out infinite;
+}
+
+@keyframes secretPulse {
+  0%,
+  100% {
+    opacity: 1;
+    filter: none;
+  }
+  55% {
+    opacity: 0.92;
+    filter: blur(0.2px);
+  }
+}
+
+.loader-grid {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(circle at 30% 30%, black 30%, transparent 75%);
+}
+
+.loader-scan {
+  background: linear-gradient(180deg, transparent, rgba(127, 232, 255, 0.18), transparent);
+  animation: loaderScan 2.6s linear infinite;
+}
+
+.loader-orb {
+  background: radial-gradient(circle, rgba(127, 232, 255, 0.35), transparent 70%);
+  filter: blur(2px);
+  animation: orbDrift 5.5s ease-in-out infinite;
+}
+
+.loader-orb-amber {
+  background: radial-gradient(circle, rgba(207, 162, 103, 0.28), transparent 70%);
+  filter: blur(2px);
+  animation: orbDrift 6.2s ease-in-out infinite reverse;
+}
+
+.loader-bar {
+  background: linear-gradient(90deg, rgba(127, 232, 255, 0.2), rgba(127, 232, 255, 0.9), rgba(127, 232, 255, 0.2));
+  box-shadow: 0 0 18px rgba(127, 232, 255, 0.55);
+  animation: loaderPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes loaderScan {
+  from {
+    transform: translate3d(0, -70%, 0);
+  }
+  to {
+    transform: translate3d(0, 70%, 0);
+  }
+}
+
+@keyframes orbDrift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate3d(14px, -10px, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes loaderPulse {
+  0%,
+  100% {
+    filter: brightness(0.9);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+}
+
+.reveal-mask {
+  --reveal: 0%;
+  mask-image: linear-gradient(90deg, transparent 0%, black var(--reveal), black 100%);
+}
+
+.classified-stamp {
+  transform: rotate(-9deg);
+  color: rgba(207, 162, 103, 0.92);
+  border: 1px solid rgba(207, 162, 103, 0.55);
+  box-shadow: 0 0 0 1px rgba(207, 162, 103, 0.15) inset;
+  text-shadow: 0 0 18px rgba(207, 162, 103, 0.18);
+}
+
+.callout-card {
+  transition:
+    box-shadow 240ms ease,
+    border-color 240ms ease,
+    background-color 240ms ease;
+}
+
+.callout-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  background-color: rgba(0, 0, 0, 0.52);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+    0 0 34px var(--toneGlow, rgba(127, 232, 255, 0.24));
+}
+
+/* Chapter sections - ScrollTrigger handles pinning */
+.chapter {
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Ensure header/entry always fills viewport and prevent horizontal overflow */
+#entry {
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+}
+
+main {
+  min-height: 100vh;
+}
+
+/* Safety: prevent wide SVGs or elements from creating horizontal scroll */
+svg {
+  max-width: 100%;
+}
+
+#entry {
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+}
